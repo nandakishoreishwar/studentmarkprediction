@@ -13,7 +13,7 @@ import hashlib
 user= ""
 
 def ClassifierPrediction(data):
-	weights = open('LRmodel81.pkl','rb')
+	weights = open('../LRmodel81.pkl','rb')
 	classifier = pickle.load(weights)
 	encoder = LabelEncoder()
 	nonnumeric_columns = [data.columns[index] for index, dtype in enumerate(data.dtypes) if dtype == 'object']
